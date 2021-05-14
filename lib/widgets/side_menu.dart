@@ -73,6 +73,7 @@ class __LibraryPlaylistState extends State<_LibraryPlaylist> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
+      // TODO: Add smooth scroll
       child: Scrollbar(
         isAlwaysShown: true,
         controller: _scrollController,
