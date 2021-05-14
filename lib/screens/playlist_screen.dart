@@ -1,7 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spotify_ui/data/data.dart';
+import 'package:flutter_spotify_ui/widgets/playlist_header.dart';
 
 class PlayListScreen extends StatefulWidget {
+  final Playlist playlist;
+  const PlayListScreen({
+    Key? key,
+    required this.playlist,
+  }) : super(key: key);
+
   @override
   _PlayListScreenState createState() => _PlayListScreenState();
 }
@@ -98,6 +106,7 @@ class _PlayListScreenState extends State<PlayListScreen> {
             isAlwaysShown: true,
             child: ListView(
               controller: _scrollController,
+              children: [PlayListHeader(playList: widget.playlist)],
             )),
       ),
     );
